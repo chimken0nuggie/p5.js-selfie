@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5.js Sketch</title>
+  <!-- Link to p5.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+
+  <!-- Optional: if you want to place the script in a separate file -->
+  <script src="sketch.js"></script>
+
+  <!-- Alternatively, you can write the p5.js code directly here -->
+  <script>
+    function setup() {
+  createCanvas(600, 600);
+}
+
+function draw() {
+  background('floralwhite');
+  
+  //hair behind the head
+  strokeWeight(1);
+  fill('black');
+  triangle(91, 300, 300, 400, 200, 500);
+  triangle(509, 300, 300, 400, 400, 500);
+  arc(300, 250, 430, 430, 5*PI/6, PI/6);
+  
+  //neck
+  fill('papayawhip');
+  rect(250, 400, 100, 200);
+  
+  //body
+  fill('lightsteelblue');
+  strokeWeight(3);
+  ellipse(300, 600, 600, 200);
+  
+  //face and ears
+  fill('papayawhip');
+  strokeWeight(1);
+  ellipse(500, 250, 40, 100);
+  ellipse(100, 250, 40, 100);
+  ellipse(300, 250, 400, 400);
+  
+  //eyes
+  fill('white');
+  strokeWeight(1);
+  quad(250, 235, 160, 230, 170, 280, 250, 265);
+  quad(350, 235, 440, 230, 430, 280, 350, 265);
+  
+  //bangs
+  fill('black');
+  quad(300, 50, 100, 330, 95, 185, 200, 59);
+  quad(300, 50, 500, 330, 505, 185, 400, 59);
+  rect(255, 50, 100, 50);
+  
+  //eyebrows
+  strokeWeight(5);
+  line(100, 200, 250, 200);
+  line(500, 200, 350, 200);
+  
+  //pupils
+  circle(205, 253, 35);
+  circle(395, 253, 35);
+  
+  //nose
+  strokeWeight(3);
+  line(300, 270, 290, 320);
+  line(290, 320, 300, 325);
+  
+  //mouth
+  strokeWeight(1);
+  fill('white');
+  arc(300, 360, 100, 100, 0, PI, PIE);
+  
+}
+  </script>
+</body>
+</html>
